@@ -39,3 +39,4 @@ menuBurger.addEventListener('click', () => {
       nav_item_5.classList.add('slide-in-nav-item-delay-4-reverse');
     }
   })
+  
