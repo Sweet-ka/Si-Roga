@@ -14,6 +14,11 @@
     src: url('/assets/fonts/TT-Norms/TTNorms-Medium.otf')
 }
 
+@font-face {
+    font-family: Urbanist;
+    src: url('/assets/fonts/Urbanist/Urbanist-VariableFont_wght.ttf')
+}
+
 * {
     font-family: Montserrat;
 }
@@ -25,7 +30,7 @@ body {
 .back {
     width: 100vw;
     height: 100vh;
-    background: url('/assets/images/back/Rectangle.jpeg');
+    background: url('/assets/images/back/Rectangle.jpeg') 40% center no-repeat;
     background-size: cover;
 }
 
@@ -34,7 +39,7 @@ section {
 }
 
 .container {
-    width: calc(100% - 160px);
+    width: calc(100% - 180px);
     height: 100%;
     margin: 0 auto;
     position: relative;
@@ -46,7 +51,7 @@ section {
 header {
     position: fixed;
     width: 100%;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
     z-index: 100;
 }
 
@@ -54,20 +59,47 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
     height: 80px;
 }
 
-.logo {
-    width: 200px;
-    height: 55px;
-    background: url('/assets/images/logo/logo.png') center center no-repeat;
-    background-size: cover;
-    margin-left: 30px;
+.bbk,
+.O {
+    font-size: 4.5em;
+    font-family: TT-Norms;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    line-height: 1;
+    color: #53a4c6;
+}
+
+.bbk * {
+    align-self: center;
+    letter-spacing: -6px;
+}
+
+.bbk .abbr{
+    font-weight: 800;
+    color: #27427c;
+}
+
+.O {
+    font-family: Urbanist;
+    font-size: 1.4em;
+    font-weight: 200;
+    background: url('/assets/images/logo/rrr.svg') 0.13em center no-repeat;
+    background-size: 0.5em;
+}
+
+.logo-bbk {
+    font-size: 2.5em;
+}
+
+.logo-bbk * {
+    letter-spacing: -4px;
 }
 
 .phone {
-    margin-right: 30px;
     right: 80px;
     transition: color 0.2s linear;
     font-size: 1.3em;
@@ -79,6 +111,59 @@ header {
 
 .phone:hover {
     color: #53a4c6;
+}
+
+.mobile-header {
+    display: none;
+}
+
+.mobile-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.icon-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.mobile-header .phone {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0;
+}
+
+.mobile-header .phone,
+.mobile-header .mail {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 0px;
+}
+
+.mobile-header .phone svg {
+    width: 70%;
+    height: 100%;
+}
+
+.mobile-header .mail {
+    position: relative;
+    border: none;
+    height: 80px;
+}
+
+.menu-burger-mobile,
+.burger-mobile {
+    position: relative;
+    left: 0;
+}
+
+.menu-burger-mobile {
+    flex: 1 1 0px;
 }
 
 .panel {
@@ -203,30 +288,7 @@ header {
     width: 100%;
     text-align: center;
     margin-top: -50px;
-}
-
-.bbk {
-    font-size: 4.5em;
-    font-family: TT-Norms;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    line-height: 1;
-    color: #53a4c6;
-}
-
-.bbk span{
-    letter-spacing: -2px;
-    font-weight: 900;
-    color: #27427c;
-}
-
-.O {
-    font-family: TT-Norms;
-    width: 60px;
-    height: 60px;
-    border: solid 7px;
-    border-radius: 50%;
+    padding: 0 5px;
 }
 
 .main p {
@@ -255,4 +317,78 @@ header {
     from { transform: scale(1); }
     50% { transform: scale(0.85); }
     to { transform: scale(1); }
+}
+
+@media (max-width: 680px) {
+    .panel {
+        display: none;
+    }
+
+    header {
+        display: none;
+    }
+
+    .mobile-header {
+        display: block;
+    }
+
+    .container {
+        width: 98%;
+        padding: 0;
+    }
+
+    .overlay-navigation {
+        width: 70%;
+    }
+
+    .mobile-header .mail svg,
+    .mobile-header .phone svg {
+        max-width: 50px;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .main {
+        font-size: 0.9em;
+    }
+    .logo {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 400px) {
+    .main {
+        font-size: 0.8em;
+    }
+    .bbk * {
+        letter-spacing: -5px;
+    }
+}
+
+@media (max-width: 350px) {
+    .bbk {
+        font-size: 3.5em;
+    }
+    .logo-bbk {
+        font-size: 2em;
+    }
+    .bbk * {
+        letter-spacing: -4px;
+    }
+}
+
+@media (max-width: 300px) {
+    .bbk {
+        font-size: 2.5em;
+    }
+    .logo-bbk {
+        font-size: 1em;
+    }
+    .burger-mobile {
+        width: 30px;
+    }
+    .bbk * {
+        letter-spacing: 0;
+    }
 }

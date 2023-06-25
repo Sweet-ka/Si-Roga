@@ -51,6 +51,12 @@
     transition: bottom .3s, transform .3s .15s;
     background-color: #fff;
   }
+  .burger-checkbox:checked + .burger-mobile::before {
+    background-color: #000;
+  }
+  .burger-checkbox:checked + .burger-mobile::after {
+    background-color: #000;
+  }
 
 
 /* ====================================
@@ -119,7 +125,6 @@ nav li a {
   display: block;
   text-align: center;
   font-size: 0.9rem;
-  margin-left: 80px;
 }
 
 nav li a:before {
