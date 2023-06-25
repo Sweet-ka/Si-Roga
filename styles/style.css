@@ -1,4 +1,6 @@
 @import url('/styles/menu.css');
+@import url('/styles/brands.css');
+
 @font-face {
     font-family: Montserrat;
     src: url('/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
@@ -17,6 +19,10 @@
 @font-face {
     font-family: Urbanist;
     src: url('/assets/fonts/Urbanist/Urbanist-VariableFont_wght.ttf')
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 * {
@@ -40,12 +46,15 @@ section {
 
 .container {
     width: calc(100% - 180px);
-    height: 100%;
     margin: 0 auto;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+}
+
+.welcome .container {
+    height: 100%;
 }
 
 header {
@@ -302,6 +311,7 @@ header {
 }
 
 .down-btn {
+    display: block;
     width: 50px;
     margin: 50px auto 0;
     fill: #27427c;
@@ -375,6 +385,9 @@ header {
     }
     .bbk * {
         letter-spacing: -4px;
+    }
+    .mobile-header {
+        height: 60px;
     }
 }
 

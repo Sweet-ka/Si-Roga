@@ -1,0 +1,105 @@
+.brands-slogan {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2.2em;
+  color: #27427c;
+}
+
+.brands-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  row-gap: 50px;
+  column-gap: 20px;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0;
+}
+
+.brands-list li {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center center;
+}
+
+.brands-list img {
+  filter: grayscale();
+  transition: filter 0.2s linear;
+  transition: transform 0.2s linear;
+
+}
+
+.brands-list li label {
+  position: absolute;
+  width: 100%;
+  height: max-content;
+  top: 100%;
+  left: 0;
+  transform: scale(0);
+  transition: top 0.2s linear;
+  transition: transform 0.4s linear;
+  font-size: 0.8em;
+  text-align: center;
+  background-color: #53a4c6;
+  color: white;
+  border: solid 0.5px #53a4c6;
+  border-radius: 5px;
+  z-index: 700;
+  display: none;
+}
+
+.brands-list li:hover img{
+  filter: none;
+  transform: scale(1.2);
+}
+
+.brands-list li:hover label{
+  transform: scale(1);
+}
+
+@media (hover: none) {
+  .brands-list li img{
+    filter: none;
+  }
+  
+  .brands-list li label{
+    transform: scale(1);
+  }
+}
+
+
+.brands-list img {
+  width: 50%;
+}
+
+@media (max-width: 1060px) {
+  .brands-slogan {
+    font-size: 2em;
+  }
+}
+@media (max-width: 720px) {
+  .brands-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .brands-slogan {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 450px) {
+  .brands-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .brands-slogan {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 450px) {
+  .brands-slogan {
+    font-size: 1em;
+  }
+}
