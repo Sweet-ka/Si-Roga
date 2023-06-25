@@ -1,0 +1,50 @@
+.brands-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 50px;
+  column-gap: 20px;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.brands-list li {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center center;
+}
+
+.brands-list img {
+  filter: grayscale();
+  transition: filter 0.2s linear;
+  transition: transform 0.2s linear;
+
+}
+
+.brands-list li label {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  top: 80%;
+  left: 0;
+  transform: scale(0);
+  transition: top 0.2s linear;
+  transition: transform 0.4s linear;
+  font-size: 0.6em;
+  text-align: center;
+}
+
+.brands-list li:hover img{
+  filter: none;
+  transform: scale(1.2);
+}
+
+.brands-list li:hover label{
+  transform: scale(1);
+}
+
+.brands-list img {
+  width: 50%;
+}
