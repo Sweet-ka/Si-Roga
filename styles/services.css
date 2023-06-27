@@ -1,0 +1,54 @@
+.services-items {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+}
+
+.services-items * {
+  text-align: center;
+}
+
+.services-items li {
+  padding: 0 20px;
+}
+
+.service-name {
+  height: 100px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.services-items h3 {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 900;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.services-items p {
+  font-size: 0.9em;
+}
+
+.services-img {
+  width: 80px;
+  height: 80px;
+  border: solid 1px #7392ab41;
+  border-radius: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.install .services-img {
+  background-image: url('/assets/images/depositphotos_236421236-stock-illustration-medical-equipment-maintenance-vector-illustration.jpeg');
+}
+
+.fix .services-img {
+  background-image: url('/assets/images/46331.jpeg');
+}
+
+.service .services-img {
+  background-image: url('/assets/images/depositphotos_238990136-stock-illustration-medical-equipment-maintenance-engineer-wearing.jpeg');
+}

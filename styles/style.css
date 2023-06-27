@@ -1,5 +1,6 @@
 @import url('/styles/menu.css');
 @import url('/styles/brands.css');
+@import url('/styles/services.css');
 
 @font-face {
     font-family: Montserrat;
@@ -29,6 +30,10 @@ html {
     font-family: Montserrat;
 }
 
+ul {
+    list-style-type: none;
+}
+
 body {
     margin: 0;
 }
@@ -40,7 +45,7 @@ body {
     background-size: cover;
 }
 
-section {
+.welcome {
     height: 100vh;
 }
 
@@ -322,7 +327,7 @@ header {
 .down-btn:hover {
     animation: none;
 }
-    
+
 @keyframes pulse {
     from { transform: scale(1); }
     50% { transform: scale(0.85); }

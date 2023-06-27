@@ -1,4 +1,5 @@
 .brands-slogan {
+  width: 100%;
   text-align: center;
   margin-top: 50px;
   font-size: 2.2em;
@@ -11,7 +12,6 @@
   grid-template-rows: repeat(auto, 1fr);
   row-gap: 50px;
   column-gap: 20px;
-  list-style-type: none;
   justify-content: center;
   padding: 0;
 }
