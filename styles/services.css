@@ -1,7 +1,15 @@
+.services .container {
+  flex-direction: column;
+}
+
 .services-items {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
   padding: 0;
+  gap: 40px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .services-items * {
@@ -9,13 +17,57 @@
 }
 
 .services-items li {
-  padding: 0 20px;
+  padding: 0 40px;
+  position: relative;
+}
+
+.services-items li::before,
+.services-items li::after {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 2px;
+  opacity: 0;
+  transition: .4s;
+  background: #53a4c6;
+  content: '';
+}
+
+.services-items li::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.services-items li::after {
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.services-items li:hover::before {
+  left: 0;
+  opacity: 1;
+}
+
+.services-items li:hover::after {
+  right: 0;
+  opacity: 1;
+}
+
+.services-items li:hover .service-name {
+  color: #53a4c6;
+}
+
+.services-items li:hover .services-img {
+  transform: rotate3d(0, 1, 0, 180deg);
 }
 
 .service-name {
   height: 100px;
   width: 80%;
   margin: 0 auto;
+  transition: .4s;
+  display: flex;
+  justify-content: center;
 }
 
 .services-items h3 {
@@ -26,8 +78,23 @@
   margin: 0;
 }
 
+.services h2 {
+  font-weight: 800;
+  font-size: 2.5em;
+  margin: 100px auto 60px;
+}
+
+.services-slogan {
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 10px auto 80px;
+  position: relative;
+  font-weight: 400;
+  text-align: center;
+}
+
 .services-items p {
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 
 .services-img {
@@ -39,6 +106,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
+  position: relative;
+  transition: 1s;
 }
 
 .install .services-img {
@@ -51,4 +120,64 @@
 
 .service .services-img {
   background-image: url('/assets/images/depositphotos_238990136-stock-illustration-medical-equipment-maintenance-engineer-wearing.jpeg');
+}
+
+.services .container::before,
+.services .container::after {
+  content: '';
+  width: 1px;
+  height: 100%;
+  background-color: #85848417;
+  position: absolute;
+  left: 33%;
+}
+
+.services .container::after {
+  left: auto;
+  right: 33%;
+}
+
+@media (max-width: 1400px) {
+  .service-name {
+    font-size: 0.9em;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .services-items li {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 900px) {
+  .service-name,
+  .services-items p {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 780px) {
+  .services {
+    font-size: 0.8em;
+  }
+  .services-items li {
+    padding: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .services-items {
+    grid-template-columns: auto;
+    width: 90%;
+  }
+  .service-name {
+    height: 36px;
+  }
+}
+
+@media (max-width: 280px) {
+  .services {
+    font-size: 0.6em;
+  }
 }
