@@ -1,8 +1,15 @@
 .menu-burger {
+<<<<<<< HEAD
   position: fixed;
   top: calc(50% - 43px);
   left: 20px;
   z-index: 9999;
+=======
+    position: fixed;
+    top: calc(50% - 43px);
+    left: 20px;
+    z-index: 9999;
+>>>>>>> 96e79cca4dc71fa79de03c6655cb726c559677d0
 }
 
 .burger-checkbox {

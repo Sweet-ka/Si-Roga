@@ -4,6 +4,7 @@
   width: 100%;
 }
 
+<<<<<<< HEAD
 .contacts-grid {
   display: flex;
   width: 100%;
@@ -18,6 +19,8 @@
   height: 100%;
 }
 
+=======
+>>>>>>> 96e79cca4dc71fa79de03c6655cb726c559677d0
 .contact-mail {
   display: flex;
   flex-direction: column;
@@ -36,18 +39,29 @@
   font-weight: 700;
   color: #000;
   text-decoration: none;
+<<<<<<< HEAD
   transition: all 0.2s linear;
+=======
+>>>>>>> 96e79cca4dc71fa79de03c6655cb726c559677d0
 }
 
 .contact-mail .adress {
   margin-top: 60px;
   font-size: 1.3em;
+<<<<<<< HEAD
   align-items: flex-start;
+=======
+}
+
+.contact-map {
+  /* flex-grow: 2; */
+>>>>>>> 96e79cca4dc71fa79de03c6655cb726c559677d0
 }
 
 .contacts-img {
   width: 40px;
   height: 40px;
+<<<<<<< HEAD
   animation-duration: 0.2s;
   animation-timing-function: linear;
   animation-iteration-count: 2;
@@ -141,4 +155,29 @@
   .first-mail {
     letter-spacing: -0.3px;
   }
+=======
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mail-img {
+  background-image: url("/assets/images/mail/mail.svg");
+}
+
+.mob-img {
+  background-image: url("/assets/images/phone/phone-svgrepo-com.svg");
+}
+
+.tel-img {
+  background-image: url("/assets/images/mail/mail.svg");
+}
+
+.fax-img {
+  background-image: url("/assets/images/fax/faxfill.svg");
+}
+
+.adress-img {
+  background-image: url("/assets/images/mail/mail.svg");
+>>>>>>> 96e79cca4dc71fa79de03c6655cb726c559677d0
 }
