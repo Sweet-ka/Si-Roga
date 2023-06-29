@@ -1,0 +1,36 @@
+footer {
+  width: 100%;
+  background-color: #27427c;
+  position: relative;
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 0.7em;
+  padding: 20px;
+}
+
+.footer-logo {
+  width: max-content;
+  background-color: #ffffff;
+}
+
+.requisites {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.column {
+  width: 70%;
+}
+
+.end {
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+@media (max-width: 620px) {
+  .requisites {
+    grid-template-columns: 1fr;
+  }
+}
