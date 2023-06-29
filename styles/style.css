@@ -2,10 +2,7 @@
 @import url("/styles/brands.css");
 @import url("/styles/services.css");
 @import url("/styles/contacts.css");
-<<<<<<< HEAD
 @import url("/styles/footer.css");
-=======
->>>>>>> 96e79cca4dc71fa79de03c6655cb726c559677d0
 
 @font-face {
   font-family: Montserrat;
@@ -263,11 +260,7 @@ header {
 }
 
 .network {
-<<<<<<< HEAD
   height: 80px;
-=======
-  height: 200px;
->>>>>>> 96e79cca4dc71fa79de03c6655cb726c559677d0
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
