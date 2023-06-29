@@ -1,0 +1,62 @@
+.contacts-wrap {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.contact-mail {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-mail li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.contact-mail a {
+  display: block;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+}
+
+.contact-mail .adress {
+  margin-top: 60px;
+  font-size: 1.3em;
+}
+
+.contact-map {
+  /* flex-grow: 2; */
+}
+
+.contacts-img {
+  width: 40px;
+  height: 40px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mail-img {
+  background-image: url("/assets/images/mail/mail.svg");
+}
+
+.mob-img {
+  background-image: url("/assets/images/phone/phone-svgrepo-com.svg");
+}
+
+.tel-img {
+  background-image: url("/assets/images/mail/mail.svg");
+}
+
+.fax-img {
+  background-image: url("/assets/images/fax/faxfill.svg");
+}
+
+.adress-img {
+  background-image: url("/assets/images/mail/mail.svg");
+}

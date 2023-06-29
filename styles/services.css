@@ -28,9 +28,9 @@
   top: 0;
   width: 2px;
   opacity: 0;
-  transition: .4s;
+  transition: 0.4s;
   background: #53a4c6;
-  content: '';
+  content: "";
 }
 
 .services-items li::before {
@@ -65,7 +65,7 @@
   height: 100px;
   width: 80%;
   margin: 0 auto;
-  transition: .4s;
+  transition: 0.4s;
   display: flex;
   justify-content: center;
 }
@@ -78,7 +78,7 @@
   margin: 0;
 }
 
-.services h2 {
+.container h2 {
   font-weight: 800;
   font-size: 2.5em;
   margin: 100px auto 60px;
@@ -111,20 +111,20 @@
 }
 
 .install .services-img {
-  background-image: url('/assets/images/depositphotos_236421236-stock-illustration-medical-equipment-maintenance-vector-illustration.jpeg');
+  background-image: url("/assets/images/depositphotos_236421236-stock-illustration-medical-equipment-maintenance-vector-illustration.jpeg");
 }
 
 .fix .services-img {
-  background-image: url('/assets/images/46331.jpeg');
+  background-image: url("/assets/images/46331.jpeg");
 }
 
 .service .services-img {
-  background-image: url('/assets/images/depositphotos_238990136-stock-illustration-medical-equipment-maintenance-engineer-wearing.jpeg');
+  background-image: url("/assets/images/depositphotos_238990136-stock-illustration-medical-equipment-maintenance-engineer-wearing.jpeg");
 }
 
 .services .container::before,
 .services .container::after {
-  content: '';
+  content: "";
   width: 1px;
   height: 100%;
   background-color: #85848417;
@@ -172,7 +172,13 @@
     width: 90%;
   }
   .service-name {
-    height: 36px;
+    height: max-content;
+    margin-bottom: 20px;
+  }
+
+  .services .container::before,
+  .services .container::after {
+    display: none;
   }
 }
 
