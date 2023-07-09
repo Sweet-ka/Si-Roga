@@ -22,7 +22,8 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-observer.observe(document.querySelector("#bbk"));
+const bbk = document.querySelector("#bbk");
+if (bbk) observer.observe(bbk);
 
 const observerFooter = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -38,4 +39,5 @@ const observerFooter = new IntersectionObserver((entries) => {
   });
 });
 
-observerFooter.observe(document.querySelector("#footer"));
+const footer = document.querySelector("#footer");
+if (footer) observerFooter.observe(footer);

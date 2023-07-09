@@ -3,6 +3,7 @@
 @import url("/styles/services.css");
 @import url("/styles/contacts.css");
 @import url("/styles/footer.css");
+@import url("/styles/message.css");
 
 @font-face {
   font-family: Montserrat;
@@ -35,6 +36,11 @@ html {
 
 ul {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
@@ -103,7 +109,7 @@ header {
   font-family: Urbanist;
   font-size: 1.4em;
   font-weight: 200;
-  background: url("/assets/images/logo/rrr.svg") 0.13em center no-repeat;
+  background: url("/assets/images/logo/cross.svg") 0.13em center no-repeat;
   background-size: 0.5em;
 }
 

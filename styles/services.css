@@ -111,15 +111,15 @@ h2 {
 }
 
 .install .services-img {
-  background-image: url("/assets/images/depositphotos_236421236-stock-illustration-medical-equipment-maintenance-vector-illustration.jpeg");
+  background-image: url("/assets/images/services/install.jpeg");
 }
 
 .fix .services-img {
-  background-image: url("/assets/images/46331.jpeg");
+  background-image: url("/assets/images/services/fix.jpeg");
 }
 
 .service .services-img {
-  background-image: url("/assets/images/depositphotos_238990136-stock-illustration-medical-equipment-maintenance-engineer-wearing.jpeg");
+  background-image: url("/assets/images/services/service.jpeg");
 }
 
 .services .container::before,
