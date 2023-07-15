@@ -1,8 +1,17 @@
 const menuBurger = document.querySelector("#burger");
 const menuBurgerMobile = document.querySelector("#burger-mobile");
+const checkbox = document.querySelector('#burger-checkbox');
 const overlay_navigation = document.querySelector(".overlay-navigation");
 
 const navli = document.querySelectorAll("nav li");
+const links = document.querySelectorAll('nav li a');
+
+links.forEach((link => {
+  link.addEventListener('click', () => {
+    nav();
+    checkbox.checked = false;
+  });
+}))
 
 menuBurger.addEventListener("click", nav);
 menuBurgerMobile.addEventListener("click", nav);
@@ -16,13 +25,13 @@ function nav() {
       li.classList.remove(`slide-in-nav-item-delay-${i}-reverse`);
       li.classList.add(`slide-in-nav-item-delay-${i}`);
     });
+    overlay_navigation.classList.remove("overlay-slide-up");
     overlay_navigation.classList.add("overlay-slide-down");
   } else {
     navli.forEach((li, i) => {
       li.classList.remove(`slide-in-nav-item-delay-${i}`);
       li.classList.add(`slide-in-nav-item-delay-${i}-reverse`);
     });
-
     overlay_navigation.classList.remove("overlay-slide-down");
     overlay_navigation.classList.add("overlay-slide-up");
   }

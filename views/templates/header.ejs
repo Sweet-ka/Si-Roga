@@ -1,0 +1,35 @@
+<header>
+  <div class="container header-container">
+    <%- include('logo.ejs') %>
+    <a class="phone" href="tel:<%= mainPhone%>"><%= mainPhoneView%></a>
+  </div>
+</header>
+<div class="mobile-header">
+  <div class="container">
+    <%- include('logo.ejs') %>
+    <div class="icon-wrap">
+      <a class="phone" href="tel:<%= mainPhone%>">
+        <%- include('../svg/phone_svg.ejs') %>
+      </a>
+      <a class="mail" href="mailto:bbk.prom.servis@gmail.com">
+        <%- include('../svg/mail_svg.ejs') %>
+      </a>
+      <div class="menu-burger menu-burger-mobile">
+        <input
+          type="checkbox"
+          id="burger-checkbox-mobile"
+          class="burger-checkbox burger-checkbox-mobile"
+        />
+        <label
+          id="burger-mobile"
+          class="burger burger-mobile"
+          for="burger-checkbox-mobile"
+        ></label>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="menu-burger panel-burger">
+  <input type="checkbox" id="burger-checkbox" class="burger-checkbox" />
+  <label id="burger" class="burger" for="burger-checkbox"></label>
+</div>

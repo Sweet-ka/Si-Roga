@@ -1,37 +1,51 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const path = require('path');
 const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const { data } = require('./shared');
 
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname)));
 
-app.listen(3000, () => {
-  console.log('Application listening on port 3000!');
+app.set("view engine", "ejs");
+app.set('views', `${__dirname}/views`);
+
+app.listen(process.env.PORT || 9000, () => {
+  console.log('Application listening on port!');
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(`${__dirname}/index.html`);
+  res.render('index', {
+    title: data.title,
+    mainPhone: data.mainPhone,
+    mainPhoneView: data.mainPhoneView
+  });
 });
 
 app.get('/message', (req, res) => {
-  res.sendFile(`${__dirname}/message.html`);
+  res.render('message', {
+    title: data.title,
+    mainPhone: data.mainPhone,
+    mainPhoneView: data.mainPhoneView
+  });
 });
 
 // отправка данных на электронную почту
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.post('/sendmail', (req, res) => {
-  console.log(req.body)
+    const data = req.body
+    console.log(data)
   const message = {
     to: 'sweet-ka@mail.ru',
     subject: 'Новый запрос на консультацию:',
     html: `
-    имя: ${req.body.name}<br>
-    телефон: ${req.body.phone}<br>
-    почта: ${req.body.email}<br>
-    сообщение: ${req.body.problem}
+    имя: ${data.name}<br>
+    телефон: ${data.phone}<br>
+    почта: ${data.email}<br>
+    сообщение: ${data.problem}
   `,
     text:
       'This <i>message</i> was sent from <strong>Node js</strong> server.',
@@ -41,16 +55,20 @@ app.post('/sendmail', (req, res) => {
 })
 
 const transporter = nodemailer.createTransport({
-  host: 'smtp.mail.ru',
-  secure: true,
-  port: 465,
+  // host: 'smtp.gmail.com',
+  // port: 587,
+  // secure: false,
+  service: 'Gmail',
   auth: {
-      user: 'sweet-ka@mail.ru',
-      pass: '2zUhgyncBiVJuHqFu34T'
-  }
+      type: 'OAuth2',
+      user: process.env.EMAIL,
+      refreshToken: process.env.EMAIL_REFRESH_TOKEN,
+      clientId: process.env.EMAIL_CLIENT_ID,
+      clientSecret: process.env.EMAIL_CLIENT_SECRET
+    }
 },
 {
-  from: 'Запрос на консультацию <sweet-ka@mail.ru>',
+  from: `Запрос на консультацию <${process.env.EMAIL}>`,
 });
 
 const mailer = message => {

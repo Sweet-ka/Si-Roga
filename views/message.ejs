@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('templates/head.ejs') %>
+  <body>
+    <div class="message-back">
+      <%- include('templates/header.ejs') %>
+      <section class="message">
+        <div class="panel left-panel"></div>
+        <div class="container">
+            <%- include('templates/navigation.ejs') %>
+          <div class="message-main">
+            <span class="message-back-bbk">ББК</span>
+            <span class="message-back-prom">ПРОМ</span>
+            <div class="message-cons">
+              <h2>Получить консультацию</h2>
+            </div>
+            <div class="contact-block white-form">
+              <div class="estimate-page">
+                <form id="main-form"
+                  novalidate="novalidate"
+                >
+                  <div class="row">
+                    <div class="col-1">
+                      <div class="inputs-col-1">
+                        <div class="inputs">
+                          <p class="col-name">Несколько слов о вашей проблеме</p>
+                          <p>
+                            <br /><br /><br />
+                            <p
+                              class="input-wrap input-name-wrap"
+                              ><input
+                                type="text"
+                                name="name"
+                                value=""
+                                size="40"
+                                class="input-name"
+                                required=true
+                                aria-invalid="false"
+                                placeholder="Имя*" /></p
+                            ><br />
+                            <p
+                              class="input-wrap input-email-wrap"
+                              ><input
+                                type="email"
+                                name="email"
+                                value=""
+                                size="40"
+                                class="input-email"
+                                placeholder="E-mail" /></p
+                            ><br />
+                            <p
+                              class="input-wrap input-phone-wrap"
+                              ><input
+                                type="tel"
+                                required
+                                name="phone"
+                                value=""
+                                class="input-phone"
+                                placeholder="Телефон*" /></p
+                            ><br />
+                            <p
+                              class="input-wrap input-message-wrap"
+                            >
+                              <textarea
+                                name="problem"
+                                cols="40"
+                                rows="0"
+                                class="input-message"
+                                placeholder="Несколько слов о вашей проблеме"
+                              ></textarea></p
+                            ><br />
+                              <div class="submit-wrap">
+                                <input id="main-submit"
+                                  type="submit"
+                                  value="Отправить"
+                                  class="form-submit" />
+                                <span class="spinner"></span>
+                              </div>
+                          </p>
+                          <div
+                            class="response-output"
+                            aria-hidden="true"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <div class="ct-block">
+                        <div class="message-contacts">
+                          <p class="col-name">Наши контакты</p>
+                        </div>
+                        <div class="inner">
+                          <a href="tel:+375291702001">
+                            <p>+375 (29) 170 20 01</p>
+                          </a>
+                        </div>
+                        <div class="inner">
+                          <a href="tel:+375173702034">
+                            <p>+375 (17) 370 20 34</p>
+                          </a>
+                        </div>
+                        <div class="inner">
+                          <a href="tel:+375173702049">
+                            <p>+375 (17) 370 20 49 (факс)</p>
+                          </a>
+                        </div>
+                        <div class="inner">
+                          <a href="mailto:bbk.prom.servis@gmail.com"
+                            ><p>bbk.prom.servis@gmail.com</p></a
+                          >
+                        </div>
+                        <div class="inner">
+                          <a
+                            href="https://goo.gl/maps/APrSiScWZ5i9STwR8"
+                            target="_blank"
+                          >
+                            <p>
+                              г.Минск, ул. Владислава Сырокомли, 12, пом. 3Н
+                            </p>
+                          </a>
+                        </div>
+                        <div class="inner">
+                          <a href=""><p>ББК-Пром</p></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <%- include('templates/right_panel.ejs') %>
+      </section>
+    </div>
+    <div class="ok-window">
+      <p>Ваше сообщение успешно отправлено!</p>
+      <button>ok</button>
+    </div>
+    <%- include('templates/footer.ejs') %>
+    <script src="/scripts/menu.js"></script>
+    <script src="/scripts/form.js"></script>
+    <script defer src="/scripts/panels.js"></script>
+  </body>
+</html>

@@ -1,0 +1,323 @@
+<%- include('templates/head.ejs') %>
+  <body>
+    <div class="back">
+      <%- include('templates/header.ejs') %>
+      <section class="welcome">
+        <div class="panel left-panel"></div>
+        <div class="container">
+          <%- include('templates/navigation.ejs') %>
+          <div class="main">
+            <h1>медицинское оборудование</h1>
+            <div id="bbk" class="bbk">
+              <span class="abbr">ББК</span><span class="prom">-Пр</span
+              ><span class="O">O</span><span class="prom">м</span>
+            </div>
+            <p>
+              мы осуществляем инсталляцию, ремонт, гарантийное и постгарантийное
+              техническое обслуживание медицинского оборудования известных
+              производителей
+            </p>
+            <a href="message" class="get-consult">Получить консультацию</a>
+            <a class="down-btn" href="#brands">
+              <%- include('svg/down_svg.ejs') %>
+            </a>
+          </div>
+        </div>
+        <%- include('templates/right_panel.ejs') %>
+      </section>
+    </div>
+    <section class="services" id="services">
+      <div class="container">
+        <h2>Наши услуги:</h2>
+        <h3 class="services-slogan">
+          10 лет мы повышаем доступность качественных медицинских услуг для
+          населения
+        </h3>
+        <ul class="services-items">
+          <li>
+            <div class="install">
+              <div class="service-name">
+                <h3>Монтаж и наладка</h3>
+              </div>
+              <div class="services-img"></div>
+              <p>
+                Наши специалисты произведут все регламентированные операции по
+                сборке и установке медицинского оборудования. После монтажа
+                будет произведен пробный пуск и проверка на соответствие
+                реальных параметров прибора его заявленным техническим
+                характеристикам. Также будет произведен инструктаж медицинского
+                персонала правилам безопасной эксплуатации оборудования.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="fix">
+              <div class="service-name">
+                <h3>Ремонт медицинской техники</h3>
+              </div>
+              <div class="services-img"></div>
+              <p>
+                Несмотря на высокую надежность современной медицинской техники,
+                она, как и любая техника, может выйти из строя. С нами это не
+                будет для вас большой проблемой - наши мастера по ремонту имеют
+                опыт работы с оборудованием, кроме того постоянно повышают
+                квалификацию, учавствуют в обучающих семинарах производителей,
+                проходят аттестацию - все это обеспечивает оперативность и
+                качество ремонта, а также гарантирует бесперебойную работу
+                оборудования в будущем.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="service">
+              <div class="service-name">
+                <h3>Гарантийное и постгарантийное обслуживание</h3>
+              </div>
+              <div class="services-img"></div>
+              <p>
+                Для обеспечения правильной и эффективной работы медицинского
+                оборудования и продления его срока эксплуатации необходимо
+                регулярное техническое обслуживание медицинского оборудования,
+                как во время гарантийного периода, так и после его истечения.
+                Только в этом случае можно предотвратить преждевременный выход
+                его из строя и сделать его эксплуатацию безопасной и
+                эффективной.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="brands" class="brands">
+      <div class="container">
+        <h3 class="services-slogan">
+          10 лет мы успешно работаем с современным медицинским оборудованием
+          известных мировых брендов
+        </h3>
+        <ul class="brands-list">
+          <li>
+            <label for="chk-1">
+              <div class="brand" data-toggle="modal" data-target="#fsModal">
+                <img
+                  id="allium"
+                  src="/assets/images/brands/allium.png"
+                  alt=""
+                />
+              </div>
+              <input id="chk-1" type="checkbox" />
+              <div class="brand-equ"><p>урологические стенты</p></div>
+            </label>
+          </li>
+          <li>
+            <label for="chk-2">
+              <div class="brand">
+                <img src="./assets/images/brands/arthrex.jpg" alt="" />
+              </div>
+              <input id="chk-2" type="checkbox" />
+              <div class="brand-equ"><p>оборудование для артроскопии</p></div>
+            </label>
+          </li>
+          <li>
+            <label for="chk-3">
+              <div class="brand">
+                <img src="/assets/images/brands/aspect.png" alt="" />
+              </div>
+              <input id="chk-3" type="checkbox" />
+              <div class="brand-equ">
+                <p>
+                  комплекс «Крисаф» для реабилитации пациентов с нарушением
+                  двигательной функции
+                </p>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label for="chk-4">
+              <div class="brand">
+                <img src="/assets/images/brands/atom.png" alt="" />
+              </div>
+              <input id="chk-4" type="checkbox" />
+              <div class="brand-equ"><p>инкубаторы для новорожденных</p></div>
+            </label>
+          </li>
+          <li>
+            <label for="chk-5">
+              <div class="brand">
+                <img src="/assets/images/brands/berchtold.jpeg" alt="" />
+              </div>
+              <input id="chk-5" type="checkbox" />
+              <div class="brand-equ"><p>светильники операционные</p></div>
+            </label>
+          </li>
+          <li>
+            <label for="chk-6">
+              <div class="brand">
+                <img src="/assets/images/brands/bsc.svg" alt="" />
+              </div>
+              <input id="chk-6" type="checkbox" />
+              <div class="brand-equ"><p>внутрисосудистое УЗИ</p></div>
+            </label>
+          </li>
+          <li>
+            <label for="chk-7">
+              <div class="brand">
+                <img src="/assets/images/brands/brainlab.png" alt="" />
+              </div>
+              <input id="chk-7" type="checkbox" />
+              <div class="brand-equ"><p>навигационное оборудование</p></div>
+            </label>
+          </li>
+          <li>
+            <label for="chk-8">
+              <div class="brand">
+                <img src="/assets/images/brands/dimeda.png" alt="" />
+              </div>
+              <input id="chk-8" type="checkbox" />
+              <div class="brand-equ"><p>хирургическое оборудование</p></div>
+            </label>
+          </li>
+          <li>
+            <label for="chk-9">
+              <div class="brand">
+                <img src="/assets/images/brands/ema.png" alt="" />
+              </div>
+              <input id="chk-9" type="checkbox" />
+              <div class="brand-equ"><p>медицинские светильники</p></div>
+            </label>
+          </li>
+          <li>
+            <label for="chk-10">
+              <div class="brand">
+                <img src="/assets/images/brands/EN.png" alt="" />
+              </div>
+              <input id="chk-10" type="checkbox" />
+              <div class="brand-equ">
+                <p>физиотерапевтическое оборудование</p>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label for="chk-11">
+              <div class="brand">
+                <img src="/assets/images/brands/haag.svg" alt="" />
+              </div>
+              <input id="chk-11" type="checkbox" />
+              <div class="brand-equ"><p>медицинские микроскопы</p></div>
+            </label>
+          </li>
+          <li>
+            <label for="chk-12">
+              <div class="brand">
+                <img src="/assets/images/brands/martin.png" alt="" />
+              </div>
+              <input id="chk-12" type="checkbox" />
+              <div class="brand-equ"><p>хирургическое оборудование</p></div>
+            </label>
+          </li>
+          <li>
+            <label for="chk-13">
+              <div class="brand">
+                <img src="/assets/images/brands/ptw.svg" alt="" />
+              </div>
+              <input id="chk-13" type="checkbox" />
+              <div class="brand-equ"><p>лучевая диагностика</p></div>
+            </label>
+          </li>
+          <li>
+            <label for="chk-14">
+              <div class="brand">
+                <img src="/assets/images/brands/shimadzu.jpg" alt="" />
+              </div>
+              <input id="chk-14" type="checkbox" />
+              <div class="brand-equ">
+                <p>рентгенодиагностическое оборудование</p>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label for="chk-15">
+              <div class="brand">
+                <img src="/assets/images/brands/smt.jpg" alt="" />
+              </div>
+              <input id="chk-15" type="checkbox" />
+              <div class="brand-equ"><p>коронарные стенты</p></div>
+            </label>
+          </li>
+          <li>
+            <label for="chk-16">
+              <div class="brand">
+                <img src="/assets/images/brands/tema.png" alt="" />
+              </div>
+              <input id="chk-16" type="checkbox" />
+              <div class="brand-equ"><p>хирургическое оборудование</p></div>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="contacts" id="contacts">
+      <div class="container contacts-container">
+        <h2>Наши контакты:</h2>
+        <div class="contacts-wrap">
+          <div class="contacts-grid">
+            <ul class="contact-mail">
+              <li class="first-mail">
+                <div class="contacts-img mail-img">
+                  <%- include('svg/contacts_mail_svg.ejs') %>
+                </div>
+                <a href="mailto:bbk.prom.servis@gmail.com"
+                  >bbk.prom.servis@gmail.com</a
+                >
+              </li>
+              <li>
+                <div class="contacts-img mob-img">
+                  <%- include('svg/contacts_mobile_svg.ejs') %>
+                </div>
+                <a href="tel:+375291702001">+375 (29) 170 20 01</a>
+              </li>
+              <li>
+                <div class="contacts-img tel-img">
+                  <%- include('svg/contacts_tel_svg.ejs') %>
+                </div>
+                <a href="tel:+375173702034">+375 (17) 370 20 34</a>
+              </li>
+              <li>
+                <div class="contacts-img fax-img">
+                  <%- include('svg/contacts_fax_svg.ejs') %>
+                </div>
+                <a href="tel:+375173702049">+375 (17) 370 20 49 (fax)</a>
+              </li>
+              <li class="adress">
+                <div class="contacts-img adress-img">
+                  <%- include('svg/contacts_adress_svg.ejs') %>
+                </div>
+                <a href="#contacts"
+                  >г.Минск,<br />
+                  ул. Владислава Сырокомли, 12,<br />
+                  пом. 3Н</a
+                >
+              </li>
+              <li>
+                <a href="message" class="get-consult">Консультация</a>
+              </li>
+            </ul>
+            <div class="contact-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2354.0819670462965!2d27.557976874646382!3d53.841406015318114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbd1a441ad8f11%3A0x55b2e035c702eac2!2sUlitsa%20Vladislava%20Syrokomli%2012%2C%20Minsk!5e0!3m2!1sen!2sby!4v1687991256218!5m2!1sen!2sby"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <%- include('templates/footer.ejs') %>
+    <script src="/scripts/menu.js"></script>
+    <script defer src="/scripts/panels.js"></script>
+  </body>
+</html>
